@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import TopMenu from './components/TopMenu';
 import Image from 'next/image';
+import Breadcrumb from './components/Breadcrumb';
 
 export default function Home() {
   return (
@@ -10,94 +11,26 @@ export default function Home() {
       {/* Article Content */}
       <article className="flex mx-12 lg:ml-32 lg:mr-20">
         <section className="w-[47%] pr-20">
-          {/* Breadcrumbs */}
-          <nav className="flex mt-5" aria-label="breadcrumb">
-            <ol className="inline-flex items-center">
-              <li className="inline-flex items-center">
-                <Link
-                  className="inline-flex items-center text-xs font-semibold"
-                  href="#"
-                >
-                  RECIPES
-                  <svg
-                    className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m1 9 4-4-4-4"
-                      color="#C68194"
-                    />
-                  </svg>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  className="inline-flex items-center text-xs font-semibold"
-                  href="#"
-                >
-                  BREAD
-                </Link>
-                <svg
-                  className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 9 4-4-4-4"
-                    color="#C68194"
-                  />
-                </svg>
-              </li>
-              <li className="flex items-center" aria-current="page">
-                <span className="inline-flex items-center text-xs font-semibold">
-                  QUICK BREAD
-                </span>
-                <svg
-                  className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 9 4-4-4-4"
-                    color="#C68194"
-                  />
-                </svg>
-              </li>
-            </ol>
-          </nav>
-
+          <Breadcrumb />
           <h1 className="text-4xl font-semibold mt-6">
             Whole-Grain Banana Bread
           </h1>
           <div className="w-full mt-28">
             {/* Content Section */}
             <section>
-              <p>
-                This one-bowl banana bread — our 2018 Recipe of the Year — uses
-                the simplest ingredients, but is incredibly moist and flavorful.
-                While the recipe calls for a 50/50 mix of flours (all-purpose
-                and whole wheat), we often make the bread 100% whole wheat, and
-                honestly? No one can tell, it&apos;s that good! And not only is
-                this bread delicious — it&apos;s versatile.
+              <p className="text-gray-600">
+                This one-bowl banana bread —{' '}
+                <a
+                  className="underline underline-offset-2 decoration-2 decoration-gray-600"
+                  href="#"
+                >
+                  our 2018 Recipe of the Year
+                </a>{' '}
+                — uses the simplest ingredients, but is incredibly moist and
+                flavorful. While the recipe calls for a 50/50 mix of flours
+                (all-purpose and whole wheat), we often make the bread 100%
+                whole wheat, and honestly? No one can tell, it&apos;s that good!
+                And not only is this bread delicious — it&apos;s versatile.
               </p>
               {/* Add more content here */}
             </section>
