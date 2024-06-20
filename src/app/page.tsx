@@ -35,63 +35,85 @@ export default function Home() {
               {/* Add more content here */}
             </section>
             <section>
-              <div className="stats stats--recipe with-rule">
-                <div className="stat__item stat__item--prep">
-                  <div className="label">Prep</div>
-                  <span>10 mins</span>
+              <div className="flex mt-8 items-start">
+                <Image src={'/clock.svg'} width={40} height={40} alt="" />
+                <div className="ml-4">
+                  <div className="mb-1 text-xs font-semibold tracking-wider">
+                    PREP
+                  </div>
+                  <span className="font-medium text-lg truncate">10 mins</span>
                 </div>
 
-                <div className="stat__item stat__item--bake">
-                  <div className="label">Bake</div>
-                  <span>1 hr to 1 hr 15 mins</span>
+                <div className="ml-8">
+                  <div className="mb-1 text-xs font-semibold tracking-wider">
+                    BAKE
+                  </div>
+                  <span className="font-medium text-lg truncate">
+                    1 hr to 1 hr 15 mins
+                  </span>
                 </div>
 
-                <div className="stat__item stat__item--total">
-                  <div className="label">Total</div>
-                  <span>1 hr 25 mins</span>
+                <div className="ml-4">
+                  <div className="mb-1 text-xs font-semibold tracking-wider">
+                    TOTAL
+                  </div>
+                  <span className="font-medium text-lg truncate">
+                    1 hr 25 mins
+                  </span>
                 </div>
               </div>
-              <div className="stats stats--recipe stats--yield-row ">
-                <div className="stat__item stat__item--yield">
-                  <div className="label">Yield</div>
-                  <span>one 9&quot; x 5&quot; loaf</span>
+
+              <hr className="mt-7" />
+
+              <div className="flex mt-5 items-start">
+                <Image src={'/yield.svg'} width={40} height={40} alt="" />
+                <div className="ml-4">
+                  <div className="mb-1 text-xs font-semibold tracking-wider">
+                    YIELD
+                  </div>
+                  <span className="font-medium text-lg">
+                    1 loaf, 12 generous servings
+                  </span>
                 </div>
 
-                <div className="stat__item stat__item--recipe-box">
+                <div className="ml-2">
                   <a
-                    href="/recipebox"
-                    className="btn btn--save js-kaf-recipe-box-add"
-                    data-recipe-id="18916"
-                    data-recipe-uuid="cb4174f2-05cd-4032-8ce5-2f1d07315a1f"
+                    href="#"
+                    className="flex items-center border border-[#da1a32] py-1.5 px-4 space-x-2"
                     aria-label="Save Recipe: Whole Grain Banana Bread"
                     data-once="recipe-box-add"
                   >
                     <svg
+                      width={20}
+                      height={20}
                       enable-background="new 0 0 15 15"
                       viewBox="0 0 15 15"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path d="m8 7v-7h-1v7h-7v1h7v7h1v-7h7v-1z"></path>
                     </svg>
-                    Save Recipe
+                    <p className="font-semibold text-xs truncate">
+                      SAVE RECIPES
+                    </p>
                   </a>
                 </div>
 
-                <div className="stat__item stat__item--print">
-                  <button
-                    id="print-recipe-button"
-                    className="btn btn--print"
-                    data-node="18916"
+                <div className="ml-2">
+                  <a
+                    href="#"
+                    className="flex items-center border border-[#da1a32] py-1.5 px-4 space-x-2"
                   >
                     <svg
+                      width={20}
+                      height={20}
                       enable-background="new 0 0 21.1 20.1"
                       viewBox="0 0 21.1 20.1"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path d="m20.6 3c-.3-.3-.7-.5-1.2-.5h-1.6v-2.5h-14.6v2.5h-1.5c-.5 0-.9.2-1.2.5s-.5.7-.5 1.2v8.3c0 .5.2.9.5 1.2s.7.5 1.2.5h2.3v5.9h13v-5.9h2.4c.5 0 .9-.2 1.2-.5s.5-.7.5-1.2v-8.3c0-.5-.2-.9-.5-1.2zm-3.6-2.1v1.6h-12.9v-1.6zm-13 7.4v4.9h-2.3c-.5 0-.8-.3-.8-.8v-8.2c0-.5.2-.7.8-.7h17.8c.5 0 .8.2.8.7v8.3c0 .5-.2.8-.8.8h-2.4v-5zm.9 10.9v-9.9h11.2v9.9z"></path>
                     </svg>
-                    Print
-                  </button>
+                    <p className="font-semibold text-xs truncate">PRINT</p>
+                  </a>
                 </div>
               </div>
             </section>
