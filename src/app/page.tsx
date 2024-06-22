@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import TopMenu from './components/TopMenu';
 import Image from 'next/image';
 import Breadcrumb from './components/Breadcrumb';
@@ -10,12 +9,20 @@ export default function Home() {
       <TopMenu />
       {/* Article Content */}
       <article className="flex mx-12 lg:ml-32 lg:mr-20">
-        <section className="w-[47%] pr-20">
+        <section className="md:w-[47%] md:pr-20">
           <Breadcrumb />
           <h1 className="text-4xl font-semibold mt-6">
             Whole-Grain Banana Bread
           </h1>
-          <div className="w-full mt-28">
+          <div className="w-full md:mt-28">
+            <section className="w-full visible md:hidden">
+              <Image
+                width={960}
+                height={636}
+                src="/article-image.jpg"
+                alt="Article Image"
+              />
+            </section>
             {/* Content Section */}
             <section>
               <p className="text-gray-600">
@@ -86,7 +93,7 @@ export default function Home() {
                     <svg
                       width={20}
                       height={20}
-                      enable-background="new 0 0 15 15"
+                      enableBackground="new 0 0 15 15"
                       viewBox="0 0 15 15"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -106,7 +113,7 @@ export default function Home() {
                     <svg
                       width={20}
                       height={20}
-                      enable-background="new 0 0 21.1 20.1"
+                      enableBackground="new 0 0 21.1 20.1"
                       viewBox="0 0 21.1 20.1"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -121,7 +128,7 @@ export default function Home() {
         </section>
 
         {/* Image Section */}
-        <section className="w-[55%]">
+        <section className="w-[55%] invisible md:visible">
           <Image
             width={960}
             height={636}

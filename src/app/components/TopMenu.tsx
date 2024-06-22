@@ -7,7 +7,7 @@ export default function TopMenu() {
     <header className="md:flex">
       {/* Logo */}
       <Image
-        className="md:absolute object-contain mx-32"
+        className="md:absolute object-contain mx-auto md:mx-32"
         width={100}
         height={100}
         src={'/dummy_300x300_ffffff_6074f2.png'}
@@ -15,8 +15,8 @@ export default function TopMenu() {
       />
       {/* Top Menu */}
       <section className="w-full">
-        <nav className="flex my-6 mx-64">
-          <ul className="inline-flex items-center space-x-1 md:space-x-14 rtl:space-x-reverse">
+        <nav className="md:flex md:my-6 md:mx-64">
+          <ul className="md:inline-flex items-center md:space-x-14 rtl:space-x-reverse text-center md:text-left">
             <li>
               <Link
                 className="text-[14px] tracking-wider font-medium focus:font-medium focus:underline underline-offset-8 decoration-2 decoration-red-700 hover:underline hover:decoration-red-400"
@@ -61,8 +61,8 @@ export default function TopMenu() {
         </nav>
 
         {/* Sub Menu */}
-        <nav className="flex h-12 my-7 px-64 bg-orange-50">
-          <ul className="inline-flex items-center space-x-1 md:space-x-8 rtl:space-x-reverse">
+        <nav className="flex md:h-12 my-7 md:px-64 bg-orange-50">
+          <ul className="md:inline-flex items-center md:space-x-8 mx-auto md:mx-0 rtl:space-x-reverse text-center md:text-left">
             <li>
               <Link className="text-xs tracking-wider font-medium" href="#">
                 CATEGORIES
