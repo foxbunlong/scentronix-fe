@@ -9,7 +9,7 @@ export default function Home() {
       <TopMenu />
       {/* Article Content */}
       <article className="flex px-4 md:px-0 md:mx-12 lg:ml-32 lg:mr-20">
-        <section className="md:w-[47%] md:pr-20">
+        <section className="w-full md:w-[47%] pr-0 md:pr-20">
           <Breadcrumb />
           <h1 className="text-4xl font-semibold mt-6">
             Whole-Grain Banana Bread
@@ -132,7 +132,7 @@ export default function Home() {
         </section>
 
         {/* Image Section */}
-        <section className="w-[55%] invisible md:visible">
+        <section className="w-[55%] hidden md:block">
           <Image
             width={960}
             height={636}
