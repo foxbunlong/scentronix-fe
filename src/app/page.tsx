@@ -8,17 +8,17 @@ export default function Home() {
     <main>
       <TopMenu />
       {/* Article Content */}
-      <article className="flex mx-12 lg:ml-32 lg:mr-20">
+      <article className="flex px-4 md:px-0 md:mx-12 lg:ml-32 lg:mr-20">
         <section className="md:w-[47%] md:pr-20">
           <Breadcrumb />
           <h1 className="text-4xl font-semibold mt-6">
             Whole-Grain Banana Bread
           </h1>
           <div className="w-full md:mt-28">
-            <section className="w-full visible md:hidden">
+            <section className="visible md:hidden">
               <Image
-                width={960}
-                height={636}
+                width={768}
+                height={509}
                 src="/article-image.jpg"
                 alt="Article Image"
               />
@@ -48,14 +48,16 @@ export default function Home() {
                   <div className="mb-1 text-xs font-semibold tracking-wider">
                     PREP
                   </div>
-                  <span className="font-medium text-lg truncate">10 mins</span>
+                  <span className="font-medium text-lg md:truncate">
+                    10 mins
+                  </span>
                 </div>
 
                 <div className="ml-8">
                   <div className="mb-1 text-xs font-semibold tracking-wider">
                     BAKE
                   </div>
-                  <span className="font-medium text-lg truncate">
+                  <span className="font-medium text-lg md:truncate">
                     1 hr to 1 hr 15 mins
                   </span>
                 </div>
@@ -64,7 +66,7 @@ export default function Home() {
                   <div className="mb-1 text-xs font-semibold tracking-wider">
                     TOTAL
                   </div>
-                  <span className="font-medium text-lg truncate">
+                  <span className="font-medium text-lg md:truncate">
                     1 hr 25 mins
                   </span>
                 </div>
@@ -72,18 +74,20 @@ export default function Home() {
 
               <hr className="mt-7" />
 
-              <div className="flex mt-5 items-start">
-                <Image src={'/yield.svg'} width={40} height={40} alt="" />
-                <div className="ml-4">
-                  <div className="mb-1 text-xs font-semibold tracking-wider">
-                    YIELD
+              <div className="md:flex mt-5 items-start">
+                <div className="flex">
+                  <Image src={'/yield.svg'} width={40} height={40} alt="" />
+                  <div className="ml-4">
+                    <div className="mb-1 text-xs font-semibold tracking-wider">
+                      YIELD
+                    </div>
+                    <span className="font-medium text-lg">
+                      1 loaf, 12 generous servings
+                    </span>
                   </div>
-                  <span className="font-medium text-lg">
-                    1 loaf, 12 generous servings
-                  </span>
                 </div>
 
-                <div className="ml-2">
+                <div className="md:ml-14 lg:ml-10 mt-4 md:mt-0">
                   <a
                     href="#"
                     className="flex items-center border border-[#da1a32] py-1.5 px-4 space-x-2"
@@ -105,7 +109,7 @@ export default function Home() {
                   </a>
                 </div>
 
-                <div className="ml-2">
+                <div className="md:ml-2 my-4 md:my-0">
                   <a
                     href="#"
                     className="flex items-center border border-[#da1a32] py-1.5 px-4 space-x-2"
